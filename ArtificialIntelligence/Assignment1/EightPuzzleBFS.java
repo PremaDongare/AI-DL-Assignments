@@ -5,7 +5,7 @@ public class EightPuzzleBFS {
 
     // Method to perform BFS search
     static void solvePuzzle(String start) {
-        // Queue to store the puzzle 
+       
         Queue<String> queue = new LinkedList<>();
 
         // Set to keep track of visited puzzle 
@@ -19,7 +19,7 @@ public class EightPuzzleBFS {
         visited.add(start);
         parentMap.put(start, null);
 
-        // Goal state we want to reach
+        // Goal state 
         String goal = "123456780";
 
         while (!queue.isEmpty()) {
