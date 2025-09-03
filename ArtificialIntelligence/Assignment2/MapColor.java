@@ -1,10 +1,10 @@
-import java.utils.*;
+import java.util.*;
 
 public class MapColor{
     public static void main(String[] args){
         // regions
 
-        String[] regions ={'A','B','C'};
+        String[] regions ={"A","B","C"};
 
         // Color
         String[] color = {"Red","Green","Blue"};
@@ -21,7 +21,7 @@ public class MapColor{
           // map to store the current color assign 
           Map<String, String> assignment = new HashMap<>();
           // start backtracking 
-          if(assignColors(0, regions, colors, neighbors, assignment)) {
+          if(assignColors(0, regions, color, neighbors, assignment)) {
              //  solution  found
             System.out.println("Solution:");
             for (String r : regions) {
@@ -43,7 +43,7 @@ public class MapColor{
 
             // try color
             for(String color:colors){
-                if(isValid(region, color, neighbours, assignment)){
+                if(isValid(region, color, neighbors, assignment)){
                     assignment.put(region, color);
 
                     if (assignColors(index + 1, regions, colors, neighbors, assignment))
